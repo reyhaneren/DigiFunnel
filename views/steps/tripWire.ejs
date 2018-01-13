@@ -1,0 +1,27 @@
+<script type="text/ng-template" id="tripWire.html">
+  <h1>Step {{ currentStep }}: Finding your Tripwire</h1>
+  <p style="color: green; font-weight: bold;">DESCRIPTION:</p>
+  <p>Once a customer has taken out their wallet, they're far more likely to leave it out and continue spending money with your company. That's why we engineer our offers to maximize the number of front-end conversions by keeping the price-point as low as
+    possible.</p>
+  <p> A Tripwire can be a premium or a low-dollar report or book, but it's typically less than $20 and is oftentimes offered for free with some form of shipping and handling charge. The key is, a monetary transaction must be processed...even if it's just
+    $1.</p>
+  <p style="color: green; font-weight: bold;">TYPES OF TRIPWIRES:</p>
+  <li>Report/Guide</li>
+  <li>Physical Premium</li>
+  <li>Small But Critical</li>
+  <li>Book/Report</li>
+  <li>Paid Webinar</li>
+  <li>Software/Plugin</li>
+  <li>Ala Carte Service</li>
+  </p>
+  <form name="tripWireForm">
+    <div class="form-group">
+      <label for="tripWireName">Name/Title</label>
+      <input type="text" class="form-control" id="tripWireName" ng-model="funnel.tripWire.name" required>
+    </div>
+    <div class="form-group">
+      <label for="tripWirePrice">Price</label>
+      <input type="number" min="0" max="{{funnel.tripWire.max}}" class="form-control" id="tripWirePrice" ng-model="funnel.tripWire.price" required>
+    </div>
+  </form>
+</script>

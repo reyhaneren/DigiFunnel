@@ -1,0 +1,86 @@
+<% include ./partials/header %>
+
+  <ng-view></ng-view>
+  <!-- Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
+
+  <!-- progressbar component -->
+  <script type="text/ng-template" id="progressbar.html">
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width:{{(currentStep*100/4)}}%" aria-valuenow="{{(currentStep*100/4)}}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </script>
+
+  <% include ./steps/create %>
+  <% include ./steps/leadMagnet %>
+  <% include ./steps/tripWire %>
+  <% include ./steps/coreOffer %>
+  <% include ./steps/profitMaximizer %>
+
+  <!-- Template -->
+  <script type="text/ng-template" id="/steps.html">
+    <div class="container funnelSteps">
+      <div ng-include="'progressbar.html'" ng-show="0 < currentStep" /><br/>
+      <div ng-include="'create.html'" ng-show="currentStep == firstStep" />
+      <div ng-include="'leadMagnet.html'" ng-show="currentStep == 1" />
+      <div ng-include="'tripWire.html'" ng-show="currentStep == 2" />
+      <div ng-include="'coreOffer.html'" ng-show="currentStep == 3" />
+      <div ng-include="'profitMaximizer.html'" ng-show="currentStep == 4" />
+      <div ng-include="'pagination.html'" />
+    </div>
+  </script>
+
+
+  <!-- pagination component -->
+  <script type="text/ng-template" id="pagination.html">
+    <div class="pull-right">
+      <button class="btn btn-success" ng-show="currentStep > firstStep" ng-click="previous()">Previous</button>
+      <button class="btn btn-success" ng-show="currentStep < lastStep" ng-click="next()">Next</button>
+      <button class="btn btn-success" ng-show="currentStep == lastStep" ng-click="finalize()">Finalized</button>
+    </div>
+  </script>
+
+  <!-- Template -->
+  <script type="text/ng-template" id="/step2.html">
+    <div ng-include="'progressbar.html'"></div>
+
+    <h1>{{ funnel.name }}</h1> completed: <input type="checkbox" ng-model="funnel.completed"><br> note: <textarea ng-model="funnel.note"></textarea><br><br>
+
+    <div ng-include="'pagination.html'"></div>
+  </script>
+
+  <script>
+    angular.module('app', ['ngRoute', 'ngResource'])
+      .controller('stepsController', function($scope, $http, $window) {
+        $scope.firstStep = 0;
+        $scope.currentStep = 0;
+        $scope.lastStep = 4;
+        $http.get('/funnel/create').success(function(data) {
+          $scope.funnel = data
+        });
+        $scope.finalize = function() {
+          $http
+            .post('/funnel', $scope.funnel)
+            .success(function(data) {
+              $window.location.href = '/funnel/detail/' + data.replace(/\"/g, "");
+            })
+            .error(function(data) {});
+        };
+        $scope.next = function() {
+          $scope.currentStep = $scope.currentStep + 1;
+        };
+        $scope.previous = function() {
+          $scope.currentStep = $scope.currentStep - 1;
+        };
+      })
+      .config(function($routeProvider) {
+        $routeProvider
+          .when('/', {
+            templateUrl: '/steps.html',
+            controller: 'stepsController'
+          })
+      });
+  </script>
+  <% include ./partials/footer %>

@@ -1,0 +1,16 @@
+<script type="text/ng-template" id="profitMaximizer.html">
+  <h1>Step {{ currentStep }}: Finding your Profix Maximizer</h1>
+  <p style="color: green; font-weight: bold;">Description: </p>
+  <p>Whether it's an upsell (offering someone more of what they already bought) a cross-sell (offering them a related product or service) or a subscription (offering them access to a club, community or association), every offer needs something on the backend
+    to increase immediate average customer value and overall engagement with the buyer.</p>
+  <form name="profitMaximizerForm">
+    <div class="form-group">
+      <label for="profitMaximizerName">Name/Title</label>
+      <input type="text" class="form-control" id="profitMaximizerName" ng-model="funnel.profitMaximizer.name" required>
+    </div>
+    <div class="form-group">
+      <label for="profitMaximizerPrice">Price</label>
+      <input type="number" class="form-control" id="profitMaximizerPrice" ng-model="funnel.profitMaximizer.price" required>
+    </div>
+  </form>
+</script>

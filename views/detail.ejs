@@ -1,0 +1,126 @@
+<% include ./partials/header %>
+	<div class="container detailContainer">
+
+		<center>
+			<p style="color: white; font-size: 30px; font-family: Krungthep;"> Choose A Traffic Source </p>
+		</center>
+
+		<div class="row" style="margin-top: 50px">
+			<div class="col-lg-1">
+				<img src="/images/facebook.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/twitter.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/linkedin.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/youtube.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/email.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/search.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/blog.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/googleplus.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/snapchat.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/yahoo.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/instagram.png" class="img-fluid">
+			</div>
+
+			<div class="col-lg-1">
+				<img src="/images/pinterest.png" class="img-fluid">
+			</div>
+
+		</div>
+
+		<center>
+			<p style="margin-top: 50px; color: white; font-size: 30px; font-family: Krungthep;">Your Personalized Customer Value Optimization</p>
+		</center>
+
+		<div class="row" style="margin-top: 50px">
+			<div class="card text-white bg-primary col-lg-3">
+				<div class="card-header">1. LEAD MAGNET</div>
+				<div class="card-body">
+					<h5 class="card-title"><%=funnel.leadMagnet.name%></h5>
+					<h5 class="card-title">$<%=funnel.leadMagnet.price%></h5>
+					<p class="card-text">Create a landing page to promote your lead magnet and to collect customer emails.
+						<br/><br/> Drive traffic to your landing page from the traffic source you picked above.
+						<br/><br/> After you get the customers contact information, you will offer them the tripwire. </p>
+				</div>
+			</div>
+			<div class="card text-white bg-success col">
+				<div class="card-header">2. TRIPWIRE</div>
+				<div class="card-body">
+					<h5 class="card-title"><%=funnel.tripWire.name%></h5>
+					<h5 class="card-title">$<%=funnel.tripWire.price%></h5>
+					<p class="card-text">Create a landing page to promote your tripwire.
+						<br/><br/> Drive traffic from the lead magnet landing page to the tripwire landing page. </p>
+				</div>
+			</div>
+			<div class="card text-white bg-danger col">
+				<div class="card-header">3. CORE OFFER</div>
+				<div class="card-body">
+					<h5 class="card-title"><%=funnel.coreOffer.name%></h5>
+					<h5 class="card-title">$<%=funnel.coreOffer.price%></h5>
+					<p class="card-text"> Create a landing page to sell your core offer.
+						<br/><br/> Once customer has purchased the tripwire and is in this phase of the funnel, it is time to offer your main product/service.</p>
+				</div>
+			</div>
+			<div class="card text-white bg-warning col">
+				<div class="card-header">4. PROFIT MAXIMIZER</div>
+				<div class="card-body">
+					<h5 class="card-title"><%=funnel.profitMaximizer.name%></h5>
+					<h5 class="card-title">$<%=funnel.profitMaximizer.price%></h5>
+					<p class="card-text"> Create a landing page to sell the final product/service for maximum profit.</p>
+				</div>
+			</div>
+		</div>
+
+		<center>
+			<p style="margin-top: 50px; color: white; font-size: 30px; font-family: Krungthep;">Follow Up Series + Return Path</p>
+		</center>
+
+		<div class="row" style="margin-top: 50px">
+			<div class="card text-white bg-secondary col-lg-3 offset-lg-3">
+				<div class="card-header">RETURN PATH</div>
+				<div class="card-body">
+					<h5 class="card-title">Primary card title</h5>
+					<p class="card-text">Because you have received their contact information through the Lead Magnet, you have the ability to continue marketing. If they purchased the product/service, you can offer new Lead Magnets, Tripwires, Core Offers, and Profit Maximizers
+					</p>
+				</div>
+			</div>
+			<div class="card text-white bg-info col-lg-3">
+				<div class="card-header">FOLLOW UP</div>
+				<div class="card-body">
+					<h5 class="card-title">Success card title</h5>
+					<p class="card-text"> Because you have permission to market to them, you can bring them back to the Tripwire, Core Offer, or Profit Maximizer that they didn’t buy the first time around through periodic emails and social media. </p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<br/> <br/><br/>
+	<% include ./partials/footer %>

@@ -1,0 +1,29 @@
+<script type="text/ng-template" id="leadMagnet.html">
+  <h1>Step {{ currentStep }}: Finding your Lead Magnet</h1>
+  <p style="color: green; font-weight: bold;">DESCRIPTION:</p>
+  <p> The purpose of a “Lead Magnet” is to provide an irresistible bribe that hits your target market right between the eyes and compels them to give their contact information in exchange for the promised “bribe.”</p>
+  <p>The Lead Magnet needs to be specific, actionable and provide value beyond what would typically be expected. (In other words, boring “me too” whitepapers don’t cut it.)Since the lead magnet is typically the start of the funnel, it’s also usually the
+    highest leverage point.</p>
+  <p style="color: green; font-weight: bold;">TYPES OF LEAD MAGNETS:</p>
+  <li>Report/Guide</li>
+  <li>Toolkit/Resource List</li>
+  <li>Software Download/Trial</li>
+  <li>Quiz/Survey</li>
+  <li>Blind/Sales Material</li>
+  <li>Cheat Sheet/Handout</li>
+  <li>Video Training</li>
+  <li>Discount/Free Shipping</li>
+  <li>Assessment/Test</li>
+  <li>Step 1 of Order Form</li>
+  </p>
+  <form name="leadMagnetForm">
+    <div class="form-group">
+      <label for="leadMagnetName">Lead Magnet Name</label>
+      <input type="text" class="form-control" id="leadMagnetName" ng-model="funnel.leadMagnet.name" required>
+    </div>
+    <div class="form-group">
+      <label for="leadMagnetPrice">Price</label>
+      <input type="text" class="form-control" id="leadMagnetPrice" value="Free" readonly>
+    </div>
+  </form>
+</script>

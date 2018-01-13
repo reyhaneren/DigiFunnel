@@ -1,0 +1,91 @@
+body {
+     background: url('../images/background.png');
+     background-size: cover;
+     background-position: top center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+
+h1 {
+	color: white;
+	font-family: Krungthep;
+}
+
+p{
+	color: white;
+}
+
+label {
+	color: white;
+}
+
+li {
+    color: white;
+}
+
+.logContainer{
+    background: rgba(14, 14, 14, 0.83);
+    border-radius: 25px;
+    margin-top: 200px;
+    margin-left: 310px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.homeContainer{
+    background: rgba(14, 14, 14, 0.83);
+    border-radius: 25px;
+    margin-top: 200px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.detailContainer{
+    background: rgba(14, 14, 14, 0.83);
+    border-radius: 25px;
+    margin-top: 200px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}
+
+.navbar-brand {
+	font-size: 30px;
+    font-family: Krungthep;
+}
+
+#homeTitle {
+    text-align: center;
+    font-family: Krungthep;
+    font-size: 25px;
+}
+
+.overview {
+     background: rgba(14, 14, 14, 0.83);
+    border-radius: 25px;
+    margin-top: 200px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0px;
+}
+
+.funnelSteps {
+    background: rgba(14, 14, 14, 0.83);
+    margin-top: 200px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-radius: 25px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

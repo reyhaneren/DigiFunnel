@@ -1,0 +1,43 @@
+<% include ./partials/header %>
+  <div class="container">
+    <div class="row">
+      <div class="col mr-2 overview">
+        <br/>
+        <a href="/funnel/new" class="btn btn-success">New Funnel</a>
+        <br/><br/>
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% funnels.forEach(function(funnel, index){ %>
+              <tr style="color: white;">
+                <th scope="row">
+                  <%= index + 1 %>
+                </th>
+                <td>
+                  <a href="/funnel/detail/<%= funnel._id %>">
+                    <%= funnel.name %>
+                  </a>
+                </td>
+                <td>
+                  <%= funnel.description %>
+                </td>
+              </tr>
+              <% }); %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col overview">
+        <img src="../images/LeadMagnet.png" class="img-thumbnail" style="width: 600px;">
+        <img src="../images/TripWire.png" class="img-thumbnail" style="width: 600px; margin-top: 10px;">
+        <img src="../images/CoreOffer.png" class="img-thumbnail" style="width: 600px; margin-top: 10px;">
+      </div>
+    </div>
+  </div>
+  <% include ./partials/footer %>

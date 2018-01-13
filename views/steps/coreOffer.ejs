@@ -1,0 +1,15 @@
+<script type="text/ng-template" id="coreOffer.html">
+  <h1>Step {{ currentStep }}: Finding your Core Offer</h1>
+  <p style="color: green; font-weight: bold;">Description: </p>
+  <p>The Core Offer is the flagship product or service that your company is ultimately trying to sell. This is what you are known for, and this is where most of your time and energy is focused.</p>
+  <form name="coreOfferForm">
+    <div class="form-group">
+      <label for="coreOfferName">Name/Title</label>
+      <input type="text" class="form-control" id="coreOfferName" ng-model="funnel.coreOffer.name" required>
+    </div>
+    <div class="form-group">
+      <label for="coreOfferPrice">Price</label>
+      <input type="number" class="form-control" id="coreOfferPrice" ng-model="funnel.coreOffer.price" required>
+    </div>
+  </form>
+</script>
