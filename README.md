@@ -1,4 +1,4 @@
-digifunnel.herokuapp.com
+https://digifunnel.herokuapp.com
 - go to the path where you want to clone repository to.
 - git clone https://github.com/reyhaneren/digiFunnel.git
 - cd digiFunnel
