@@ -1,4 +1,4 @@
-# digiFunnel
+# DigiFunnel
 
 https://digifunnel.herokuapp.com
 
